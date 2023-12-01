@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import "../styles/card.css"
+import "./styles/card.css"
 
 function Cards({ listaVideos }) {
 
