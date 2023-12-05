@@ -34,7 +34,43 @@ const [titulo, setTitulo] = useState("");
         }
 
         return(
-            <h1>Ola</h1>
+            <div className="layout">
+                <div className="botao">
+                    <form className="form"  onSubmit={salvar}>
+
+                        <h2>Título</h2>
+                        <input value={titulo}
+                            onChange={(e) => setTitulo(e.target.value)} />
+
+                        <h2>Genêro</h2>
+                        <input value={genero}
+                            onChange={(e) => setGenero(e.target.value)} />
+
+                        <h2>Lançamento</h2>
+                        <input value={lançamento}
+                            onChange={(e) => setLançamento(e.target.value)} />
+                            
+                        <h2>Diretor</h2>
+                        <input value={diretor}
+                            onChange={(e) => setDiretor(e.target.value)} />
+
+                        <h2>ID</h2>
+                        <input value={id}
+                            onChange={(e) => setId(e.target.value)} />
+
+                        <h2>Faixa Etaria</h2>
+                        <input value={faixaEtaria}
+                            onChange={(e) => setFaixaEtaria(e.target.value)} />
+
+                        <h2>Link</h2>
+                        <input value={link}
+                            onChange={(e) => setLink(e.target.value)} />
+
+
+
+                    </form>
+                </div>
+            </div>
         );
 
     }
