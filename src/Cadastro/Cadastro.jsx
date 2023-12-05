@@ -1,14 +1,17 @@
 import  { useEffect, useState } from "react"
 
 export default function Cadastro() {
-const [titulo, setTitulo] = useState("");
+    const listaLocalStorage = JSON.parse(localStorage.getItem("Lista")) || []
+    const [titulo, setTitulo] = useState("");
     const [genero, setGenero] = useState("");
     const [lançamento, setLançamento] = useState("");
     const [diretor, setDiretor] = useState("");
-    const [id, setId] = useState(1);
+    const [id, setId] = useState(listaLocalStorage[listaLocalStorage.length - 1]?.id + 1 || 1);
     const [faixaEtaria, setFaixaEtaria] = useState("");
     const [link, setLink] = useState("");
-    const [lista, setLista] = useState([]);
+    const [lista, setLista] = useState(listaLocalStorage);
+
+    useEffect(() => { localStorage.setItem ("Lista", JSON.stringify(lista))},   [lista])
 
     const salvar = (e) => {
         e.preventDefault()
@@ -20,17 +23,15 @@ const [titulo, setTitulo] = useState("");
                 id: id,
                 faixaEtaria: faixaEtaria,
                 link: link,
-                lista: lista
             }])
 
             setTitulo("")
             setGenero("")
             setLançamento("")
             setDiretor("")
-            setId("")
+            setId(id + 1)
             setFaixaEtaria("")
             setLink("")
-            setLista("")
         }
 
         return(
@@ -43,7 +44,7 @@ const [titulo, setTitulo] = useState("");
                             onChange={(e) => setTitulo(e.target.value)} />
 
                         <h2>Genêro</h2>
-                        <input value={genero}
+                        <input value={genero}   
                             onChange={(e) => setGenero(e.target.value)} />
 
                         <h2>Lançamento</h2>
@@ -66,10 +67,24 @@ const [titulo, setTitulo] = useState("");
                         <input value={link}
                             onChange={(e) => setLink(e.target.value)} />
 
-
+                        <button>Adicionar</button>
 
                     </form>
                 </div>
+
+            {lista.map((obj) => 
+            <div className="lista">
+                <p>{obj.titulo}</p>
+                <p>{obj.genero}</p>
+                <p>{obj.lançamento}</p>
+                <p>{obj.diretor}</p>
+                <p>{obj.id}</p>
+                <p>{obj.faixaEtaria}</p>
+                <p>{obj.link}</p>
+            </div>  
+            
+            )}
+
             </div>
         );
 
