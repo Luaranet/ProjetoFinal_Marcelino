@@ -80,7 +80,15 @@ export default function Cadastro() {
                 <p>{obj.diretor}</p>
                 <p>{obj.id}</p>
                 <p>{obj.faixaEtaria}</p>
-                <p>{obj.link}</p>
+
+                    <iframe
+                        width="800"
+                        height="480"
+                        src={`https://www.youtube.com/embed/${obj.link.slice(17)}`}
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe> 
             </div>  
             
             )}
