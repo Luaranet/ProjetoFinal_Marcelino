@@ -87,7 +87,7 @@ export default function Cadastro() {
                         src={`https://www.youtube.com/embed/${obj.link.slice(17)}`}
                         frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen>
+                        allowfullscreen>    
                     </iframe> 
             </div>  
             
