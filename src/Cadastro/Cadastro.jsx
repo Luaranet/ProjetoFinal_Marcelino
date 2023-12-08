@@ -1,4 +1,5 @@
 import  { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom";
 
 export default function Cadastro() {
     const listaLocalStorage = JSON.parse(localStorage.getItem("Lista")) || []
@@ -12,6 +13,8 @@ export default function Cadastro() {
     const [lista, setLista] = useState(listaLocalStorage);
 
     useEffect(() => { localStorage.setItem ("Lista", JSON.stringify(lista))},   [lista])
+
+    const navegate = useNavigate()
 
     const salvar = (e) => {
         e.preventDefault()
@@ -32,6 +35,7 @@ export default function Cadastro() {
             setId(id + 1)
             setFaixaEtaria("")
             setLink("")
+            navegate("/")
         }
 
         return(
