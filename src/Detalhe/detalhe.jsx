@@ -1,14 +1,14 @@
 import { useParams } from "react-router-dom";
 import Card from "../Componentes/Card";
 
-export default function Detalhe(){
+export default function detalhe(){
 
     const { id } = useParams();
     const lista = JSON.parse( localStorage.getItem("Lista"));
 
-    const atividade = lista.filter( (objeto) => {
-        if(objeto.id == id) {
-            return objeto;
+    const atividade = lista.filter( (obj) => {
+        if(obj.id == id) {
+            return obj;
         }
         return null;
     })
@@ -16,7 +16,7 @@ export default function Detalhe(){
     console.log( atividade[0] );
 
     return(
-        <Card atividade={atividade[0]} />
+        <Card obj ={atividade[0]} />
     );
 
 
