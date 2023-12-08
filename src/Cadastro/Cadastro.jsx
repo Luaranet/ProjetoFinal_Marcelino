@@ -1,5 +1,6 @@
 import  { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom";
+import Menu from "../Componentes/Menu";
 
 export default function Cadastro() {
     const listaLocalStorage = JSON.parse(localStorage.getItem("Lista")) || []
@@ -16,9 +17,9 @@ export default function Cadastro() {
 
     const navegate = useNavigate()
 
-    const salvar = (e) => {
+    const salvar = async (e) => {
         e.preventDefault()
-            setLista([...lista,{
+           await setLista([...lista,{
                 titulo: titulo,
                 genero: genero, 
                 lançamento: lançamento,
@@ -39,7 +40,9 @@ export default function Cadastro() {
         }
 
         return(
+            
             <div className="layout">
+                <Menu/>
                 <div className="botao">
                     <form className="form"  onSubmit={salvar}>
 

@@ -1,4 +1,5 @@
 import Card from '../Componentes/Card'
+import Menu from '../Componentes/Menu';
 
 export default function Destaques(){
 
@@ -7,6 +8,8 @@ export default function Destaques(){
     return(
 
         <div>
+            <Menu/>
+
          {listaDes.slice(-4).map((obj) => 
 
          <Card obj = {obj}/>

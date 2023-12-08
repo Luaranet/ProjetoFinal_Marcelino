@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Card({obj}){
     return(
         <div className="lista">
@@ -17,6 +19,7 @@ export default function Card({obj}){
                     <p>{obj.diretor}</p>
                     <p>{obj.id}</p>
                     <p>{obj.faixaEtaria}</p>
+                    <Link to={`/detalhe/${obj.id}`}><button>ver mais</button></Link>
 
             </div>  
             
