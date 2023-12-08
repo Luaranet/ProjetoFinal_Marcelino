@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import Card from "../Componentes/Card";
+import CardB from "../Componentes/CardB";
 
 export default function detalhe(){
 
@@ -16,7 +16,7 @@ export default function detalhe(){
     console.log( atividade[0] );
 
     return(
-        <Card obj ={atividade[0]} />
+        <CardB obj ={atividade[0]} />
     );
 
 

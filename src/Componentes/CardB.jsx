@@ -1,6 +1,4 @@
-import { Link } from "react-router-dom";
-
-export default function Card({obj}){
+export default function CardB({obj}){
     return(
         <div className="lista">
 
@@ -14,8 +12,12 @@ export default function Card({obj}){
                     </iframe> 
 
                     <p>{obj.titulo}</p>
+                    <p>{obj.genero}</p>
+                    <p>{obj.lançamento}</p>
+                    <p>{obj.diretor}</p>
+                    <p>{obj.id}</p>
                     <p>{obj.faixaEtaria}</p>
-                    <Link to={`/detalhe/${obj.id}`}><button>ver mais</button></Link>
+                    
 
             </div>  
             
