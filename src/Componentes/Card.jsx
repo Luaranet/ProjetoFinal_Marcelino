@@ -1,12 +1,6 @@
 export default function Card({obj}){
     return(
         <div className="lista">
-                <p>{obj.titulo}</p>
-                <p>{obj.genero}</p>
-                <p>{obj.lançamento}</p>
-                <p>{obj.diretor}</p>
-                <p>{obj.id}</p>
-                <p>{obj.faixaEtaria}</p>
 
                     <iframe
                         width="800"
@@ -16,6 +10,14 @@ export default function Card({obj}){
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen>    
                     </iframe> 
+
+                    <p>{obj.titulo}</p>
+                    <p>{obj.genero}</p>
+                    <p>{obj.lançamento}</p>
+                    <p>{obj.diretor}</p>
+                    <p>{obj.id}</p>
+                    <p>{obj.faixaEtaria}</p>
+
             </div>  
             
     )
