@@ -1,23 +1,20 @@
-import { useParams } from "react-router-dom";
-import CardB from "../Componentes/CardB";
+import { useParams } from "react-router-dom"
+import CardB from "../Componentes/CardB"
 
 export default function detalhe(){
+       const lista = JSON.parse( localStorage.getItem("Lista"))
+       const {id} = useParams()
 
-    const { id } = useParams();
-    const lista = JSON.parse( localStorage.getItem("Lista"));
+      const listaDetalhe = lista.filter( (obj) => {
+          if(obj.id == id) {
+              return obj;
+            }
+             return null
+        })
 
-    const atividade = lista.filter( (obj) => {
-        if(obj.id == id) {
-            return obj;
-        }
-        return null;
-    })
+      console.log( listaDetalhe[0] )
 
-    console.log( atividade[0] );
-
-    return(
-        <CardB obj ={atividade[0]} />
-    );
-
-
-}
+      return(
+         <CardB obj ={listaDetalhe[0]} />
+      )
+ }
