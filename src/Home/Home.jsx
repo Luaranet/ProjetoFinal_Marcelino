@@ -1,5 +1,6 @@
 import Card from '../Componentes/Card'
 import Menu from '../Componentes/Menu'
+import "./home.css"
 
 
 export default function Home(){
@@ -7,11 +8,12 @@ export default function Home(){
     return(
         <div>
 
-        <Menu />
-        <h1>PTAC 2 - PROJETO FINAL</h1>
+        <Menu/>
         
          {listaHome.map( (obj)=> 
          <Card obj= {obj}/> )}
         </div>
+
+
     )
  }
