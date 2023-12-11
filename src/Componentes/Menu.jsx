@@ -29,7 +29,7 @@ export default function Menu() {
 
            <li class="nav-item">
            
-            <Link to={'/destaque'}>
+            <Link to={'/destaques'}>
               <p> <img src="../imagens/destaque.png"></img>Destaques</p>
             </Link>
             </li>

@@ -8,6 +8,7 @@ export default function Destaques(){
 
         <div>
             <Menu/>
+            
             {listaDes.slice(-4).map((obj)=> 
             <Card obj ={obj} />
             )}
