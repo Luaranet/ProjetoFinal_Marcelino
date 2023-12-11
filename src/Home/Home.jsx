@@ -6,14 +6,16 @@ import "./home.css"
 export default function Home(){
     const listaHome = JSON.parse(localStorage.getItem("Lista"))
     return(
-        <div>
+        <div className='content'>
+            <Menu/>
+        <div className='layoutHome'>
 
-        <Menu/>
+        
         
          {listaHome.map( (obj)=> 
          <Card obj= {obj}/> )}
         </div>
-
+        </div>
 
     )
  }

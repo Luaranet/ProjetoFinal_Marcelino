@@ -1,0 +1,66 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Ou outro método de alinhamento desejado */
+  }
+  
+  .card {
+    background-color: #9a9a9a70;
+    width: 350px;
+    height: 350px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 25px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card-video {
+    width: 100%;
+    height: 250px; 
+    overflow: hidden;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .card-video iframe {
+    width: 100%;
+    height: 180px;
+  }
+  
+  .card-info {
+    padding: 16px;
+    text-align: center;
+  }
+  
+  .card-title {
+    color: white;
+    font-size: 25px;
+    margin-bottom: 8px;
+  }
+  
+  .card-age {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 8px;
+  }
+  
+  .card-button {
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: background-color 0.3s;
+  }
+  
+  .card-button:hover {
+    background-color: #ff0000;
+  }

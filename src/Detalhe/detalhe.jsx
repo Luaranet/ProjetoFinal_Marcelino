@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom"
 import CardB from "../Componentes/CardB"
+import Menu from "../Componentes/Menu"
 
 export default function detalhe(){
        const lista = JSON.parse( localStorage.getItem("Lista"))
@@ -15,6 +16,9 @@ export default function detalhe(){
       console.log( listaDetalhe[0] )
 
       return(
+        <div>
+          <Menu/>
          <CardB obj ={listaDetalhe[0]} />
+         </div>
       )
  }

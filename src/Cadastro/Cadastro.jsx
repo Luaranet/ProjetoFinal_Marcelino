@@ -11,6 +11,7 @@ export default function Cadastro() {
     const [diretor, setDiretor] = useState("");
     const [faixaEtaria, setFaixaEtaria] = useState("");
     const [link, setLink] = useState("");
+    const [descricao, setDescricao] = useState("")
     const [lista, setLista] = useState(listaLocalStorage);
     const [id, setId] = useState(listaLocalStorage[listaLocalStorage.length - 1]?.id + 1 || 1);
 
@@ -28,6 +29,7 @@ export default function Cadastro() {
                 genero: genero,
                 faixaEtaria: faixaEtaria,
                 lançamento: lançamento,
+                descricao: descricao,
                 link: link,
                 id: id,
             },
@@ -39,6 +41,7 @@ export default function Cadastro() {
         setGenero("");
         setFaixaEtaria("");
         setLançamento("");
+        setDescricao("");
         setLink("");
         setId(id + 1);
     };
@@ -118,8 +121,38 @@ export default function Cadastro() {
                             onChange={(e) => setLink(e.target.value)}
                         />
                     </div>
+
+                </div>
+
+                <div className="row mb-3 div-inputs">
+                    <div className="col-md-6 mb-3">
+                        <input
+                            type="text"
+                            className="form-control input1"
+                            placeholder="Descrição"
+                            aria-label="Descrição"
+                            value={descricao}
+                            onChange={(e) => setDescricao(e.target.value)}
+                        />
+                    </div>
+    
+                    <div className="col-md-6 mb-3">
+                        <input
+                            type="text"
+                            className="form-control"
+                            placeholder="ID"
+                            aria-label="ID"
+                            value={id}
+                            onChange={(e) => setId (e.target.value)}
+                        />
+                    </div>
+
+                    
+
+                    
                     <button type="submit" className="btn btn-primary div-button">Adicionar</button> 
                 </div>
+    
     
                
             </form>
